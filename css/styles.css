@@ -1,52 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-image: url("../assets/fondo.jpg");
+  background-image: url("../assets/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: 100% 110%;
   height: 100%;
 }
 header {
   width: 100%;
   text-align: center;
   padding: 50px 0;
-  color: rgb(195, 222, 196);
+  color: rgb(255, 255, 255);
 }
 header h1 {
-  font-size: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 50px;
   height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .score-board {
-  border: 2px solid #000;
+  display: flex;
+  justify-content: space-around;
+  border: 5px solid rgb(57, 11, 100);
   width: 300px;
   height: 150px;
   margin-top: 100px;
   color: #fff;
 }
+.score-board h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.score-board p {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cpu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.btn-container {
+  margin-top: 120px;
+}
+.btn-container button {
+  height: 50px;
+  width: 160px;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: rgb(226, 43, 183);
+  color: #fff;
+  font-weight: bold;
+}
 .choices {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 80px;
   align-items: center;
+  padding: 20px;
 }
 .choices h2 {
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
 }
 .choices div {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
-}
-.btn-container {
-  margin-top: 100px;
+  width: 150%;
+  justify-content: center;
 }
