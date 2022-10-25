@@ -81,12 +81,14 @@ main {
 .choices {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 50px;
   align-items: center;
   padding: 20px;
-  background-color: rgba(230, 74, 157, 0.662);
+  background-color: rgb(129 74 230 / 66%);
   border-radius: 12px;
+  box-shadow: 5px 5px 5px rgb(231, 73, 223);
   width: 400px;
+  margin-bottom: 50px;
 }
 .choices h2 {
   color: #fff;

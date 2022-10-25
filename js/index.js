@@ -1,14 +1,14 @@
 let userScore = 0;
 let cpuScore = 0;
-let closeBtn;
+let closeButton;
 const userScore_p = document.getElementById("user-score");
 const cpuScore_p = document.getElementById("cpu-score");
 const restart = document.getElementById("restart");
 const result = document.getElementById("result");
-const modal = document.querySelector(".modal")
-const rock_div = document.getElementById("rock");
-const paper_div = document.getElementById("paper");
-const scissors_div = document.getElementById("scissors");
+const modalWindow = document.querySelector(".modal")
+const containerRock = document.getElementById("rock");
+const containerPaper = document.getElementById("paper");
+const containerScissors = document.getElementById("scissors");
 
 
 function getCpuChoice() {
@@ -18,12 +18,12 @@ function getCpuChoice() {
 }
 
 
-function win(userChoice, cpuChoice) {
+function winner(userChoice, cpuChoice) {
   userScore++;
   userScore_p.innerHTML = userScore;
   cpuScore_p.innerHTML = cpuScore;
   result.innerHTML = `<span class="close"></span> <h1 class="text-win">¡Tu ganas!</h1> <p>La <strong>CPU</strong> eligio <strong>${cpuChoice}</strong></p>`;
-  modal.style.display = 'block';
+  modalWindow.style.display = 'block';
 }
 
 function lose(userChoice, cpuChoice){
@@ -31,14 +31,14 @@ function lose(userChoice, cpuChoice){
   userScore_p.innerHTML = userScore;
   cpuScore_p.innerHTML = cpuScore;
   result.innerHTML = `<span class="close"></span> <h1 class="text-lose">Tu pierdes</h1> <p>La <strong>CPU</strong> eligio <strong>${cpuChoice}</strong></p>`; 
-  modal.style.display = 'block'
+  modalWindow.style.display = 'block'
 }
 
 function draw(userChoice, cpuChoice){
   userScore_p.innerHTML = userScore;
   cpuScore_p.innerHTML = cpuScore;
   result.innerHTML = `<span class="close"></span> <h1>Es un empate</h1> <p>Ambos eligieron <strong>${cpuChoice}</strong></p>`;
-  modal.style.display = 'block'
+  modalWindow.style.display = 'block'
 }
 
 
@@ -48,7 +48,7 @@ function play(userChoice) {
     case 'rocatijera':
     case 'papelroca':
     case 'tijerapapel':
-      win(userChoice, cpuChoice);
+      winner(userChoice, cpuChoice);
       break;
     case 'rocapapel':
     case 'papeltijera':
@@ -65,29 +65,29 @@ function play(userChoice) {
 
 
 function main() {
-  rock_div.addEventListener('click', function() {
+  containerRock.addEventListener('click', function() {
     play('roca');
   })
   
-  paper_div.addEventListener('click', function() {
+  containerPaper.addEventListener('click', function() {
     play('papel');
   })
   
-  scissors_div.addEventListener('click', function() {
+  containerScissors.addEventListener('click', function() {
     play('tijera');
   })
 }
 
 
 function clearModal(e){
-  closeBtn = document.querySelector('.close');
+  closeButton = document.querySelector('.close');
 
-  if(e.target == modal) {
-    modal.style.display = "none"
+  if(e.target == modalWindow) {
+    modalWindow.style.display = "none"
   }
-  else if(closeBtn){
-    closeBtn.addEventListener('click', function(){
-      modal.style.display = "none"
+  else if(closeButton){
+    closeButton.addEventListener('click', function(){
+      modalWindow.style.display = "none"
     });
   }
 }
