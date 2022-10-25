@@ -43,9 +43,10 @@ main {
 .score-board h1 {
   font-size: 30px;
   font-weight: bold;
+  color: rgb(37, 2, 54);
 }
 .score-board p {
-  font-size: 25px;
+  font-size: 50px;
   text-align: center;
   font-weight: bold;
 }
@@ -70,6 +71,12 @@ main {
   background-color: rgb(226, 43, 183);
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
+}
+.btn-container button:hover {
+  background-color: rgb(57, 11, 100);
+  border-color: #fff;
+  
 }
 .choices {
   display: flex;
@@ -77,6 +84,9 @@ main {
   margin-top: 80px;
   align-items: center;
   padding: 20px;
+  background-color: rgba(230, 74, 157, 0.662);
+  border-radius: 12px;
+  width: 400px;
 }
 .choices h2 {
   color: #fff;
@@ -85,6 +95,9 @@ main {
 .choices div {
   margin-top: 30px;
   display: flex;
-  width: 150%;
+  width: 100%;
   justify-content: center;
+}
+.choices div img {
+  cursor: pointer;
 }
