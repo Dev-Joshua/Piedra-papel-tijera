@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 
 * {
   margin: 0;
@@ -10,8 +10,9 @@ body {
   background-image: url("../assets/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 110%;
-  height: 100%;
+  /* background-size: 100% 110%;
+  height: 100%; */
+  /* overflow: hidden; */
 }
 header {
   width: 100%;
@@ -20,7 +21,7 @@ header {
   color: rgb(255, 255, 255);
 }
 header h1 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 40px;
 }
 main {
@@ -29,7 +30,7 @@ main {
   align-items: center;
   margin-top: 50px;
   height: 100%;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 .score-board {
   display: flex;
@@ -76,7 +77,6 @@ main {
 .btn-container button:hover {
   background-color: rgb(57, 11, 100);
   border-color: #fff;
-  
 }
 .choices {
   display: flex;
